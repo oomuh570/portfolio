@@ -79,14 +79,14 @@ h2 {
   color: var(--ink);
   border-bottom: 2px solid var(--ink);
   padding-bottom: 6px;
-  margin: 0 0 44px;
+  margin: 0 0 24px;
   display: inline-block;
 }
 
 /* Header */
 header {
   position: relative;
-  padding: 110px 0 100px;
+  padding: 64px 0 28px;
 }
 
 /* Case file stamp, top-left of the header */
@@ -125,7 +125,7 @@ h1.neon {
   font-family: var(--serif);
   font-weight: 900;
   text-transform: uppercase;
-  font-size: clamp(3.4rem, 11vw, 8rem);
+  font-size: clamp(3rem, 8vw, 5rem);
   line-height: 0.92;
   color: var(--ink);
   margin: 0;
@@ -156,11 +156,37 @@ h1.neon em {
 /* Intro: boxed note */
 .intro {
   max-width: 30em;
-  margin: 34px 0 28px;
+  margin: 0;
   padding: 16px 20px;
   background: color-mix(in srgb, var(--surface) 60%, transparent);
   border: 1px solid var(--line);
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Contact links in the hero, just under the role line */
+.hero-links {
+  margin: 0 0 34px;
+}
+
+/* Intro text on the left, photo placeholder on the right */
+.bio {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 28px;
+  align-items: start;
+  margin: 34px 0 28px;
+}
+
+/* Photo: pinned snapshot look */
+.photo {
+  display: block;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--ink);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  transform: rotate(2deg);
+  margin-top: -34px;
 }
 
 .links {
@@ -443,6 +469,53 @@ h1.neon em {
   color: var(--accent);
 }
 
+/* Smooth scrolling and a short highlight when a section link is clicked */
+html {
+  scroll-behavior: smooth;
+}
+
+section:target {
+  animation: section-flash 1.2s ease-out;
+}
+
+section:target h2 {
+  animation: heading-in 0.6s ease-out;
+}
+
+@keyframes section-flash {
+  0% { background-color: color-mix(in srgb, var(--accent) 18%, transparent); }
+  100% { background-color: transparent; }
+}
+
+@keyframes heading-in {
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Clickable section links at the top of the page */
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 24px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-nav a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.section-nav a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 /* Footer */
 footer {
   border-top: 1px solid var(--line);
@@ -479,6 +552,15 @@ footer .wrap {
     top: 20px;
   }
 
+  .bio {
+    grid-template-columns: 1fr;
+  }
+
+  .photo {
+    width: 240px;
+    margin-top: 0;
+  }
+
   .job {
     grid-template-columns: 1fr;
     gap: 2px;
@@ -491,6 +573,10 @@ footer .wrap {
 
 /* Reduced motion: no animation or transitions */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *, *::before, *::after {
     animation: none !important;
     transition: none !important;
