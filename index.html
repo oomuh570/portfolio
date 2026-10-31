@@ -4,194 +4,196 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ochihai Omuha — Software Engineering & Security</title>
+  <meta name="description" content="Ochihai Omuha: software engineering and security.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="themes/vice-city.css">
-  <link rel="stylesheet" href="themes/god-of-war.css">
 </head>
 <body>
-  <button type="button" class="corner-toggle" id="theme-toggle" aria-label="Toggle light or dark">◐</button>
 
   <header>
-    <div class="sunset" aria-hidden="true"></div>
+    <p class="case-label">Case file No. 0471 · Confidential</p>
 
-    <svg class="battle" viewBox="0 0 400 140" aria-hidden="true">
-      <g class="warrior">
-        <circle cx="80" cy="60" r="12" fill="#f9df4a"/>
-        <rect x="72" y="72" width="16" height="30" fill="#f9df4a"/>
-      </g>
-      <g class="giant">
-        <ellipse cx="300" cy="70" rx="40" ry="50" fill="#7a0a0a"/>
-        <circle cx="300" cy="50" r="18" fill="#f9df4a"/>
-      </g>
-      <g class="chain-a"><line class="links" x1="95" y1="60" x2="280" y2="60" stroke="#f9df4a" stroke-width="3" stroke-dasharray="6 4"/></g>
-    </svg>
+    <div class="wrap">
+      <div class="status-bar" aria-hidden="true">
+        <span id="sb-date"></span>
+        <span class="sb-user">Ochihai Omuha</span>
+        <span id="sb-time"></span>
+      </div>
 
-    <svg class="chase" viewBox="0 0 400 80" aria-hidden="true">
-      <rect class="road" x="0" y="60" width="400" height="4" fill="#fe6dc6"/>
-      <g class="run"><rect x="0" y="40" width="50" height="16" rx="4" fill="#fe6dc6"/></g>
-      <circle class="flash-a" cx="20" cy="30" r="5" fill="#007fff"/>
-      <circle class="flash-b" cx="35" cy="30" r="5" fill="#ff3b30"/>
-    </svg>
+      <h1 class="neon">Ochihai <em>Omuha</em></h1>
+      <p class="role">Computer Science, Mount Royal University</p>
+      <p class="intro">
+        I'm interested in software and technology, and I enjoy building practical
+        systems that solve real problems. I care about keeping them secure and
+        reliable.
+      </p>
 
-    <div class="status-bar">
-      <span id="sb-date"></span>
-      <span class="sb-user">Ochihai Omuha</span>
-      <span id="sb-time"></span>
+      <ul class="links">
+        <li><a href="mailto:oomuh570@mtroyal.ca">oomuh570@mtroyal.ca</a></li>
+        <li><a href="https://github.com/oomuh570" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ochi-omuha/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="Omuha_Ochihai_2026_CompSci_Resume.pdf">Resume</a></li>
+      </ul>
     </div>
-
-    <div class="menu-row" role="group" aria-label="Choose a theme">
-      <span class="menu-spot" id="menu-spot" aria-hidden="true"></span>
-      <button type="button" class="tile" data-theme-pick="original" aria-pressed="true" aria-label="Original" style="--c1:#2f5d62;--c2:#1d3f43;">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="9" fill="#f7f6f2"/></svg>
-      </button>
-      <button type="button" class="tile" data-theme-pick="miami" aria-pressed="false" aria-label="Vice City" style="--c1:#fe6dc6;--c2:#007f7f;">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="9" fill="#fff4fa"/></svg>
-      </button>
-      <button type="button" class="tile" data-theme-pick="war" aria-pressed="false" aria-label="God of War" style="--c1:#7a0a0a;--c2:#f8a20f;">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="9" fill="#fef580"/></svg>
-      </button>
-      <div class="menu-label" id="menu-label" aria-live="polite">Original</div>
-    </div>
-
-    <h1>Ochihai Omuha</h1>
-    <p class="role">Computer Science, Mount Royal University</p>
-    <p class="intro">
-      I'm interested in software and technology, and I enjoy building practical
-      systems that solve real problems. I care about keeping them secure and
-      reliable.
-    </p>
-
-    <nav class="header-links" aria-label="Links">
-      <a href="Omuha_Ochihai_2026_CompSci_Resume.pdf">Resume</a>
-    </nav>
   </header>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <div class="wrap">
+      <h2>Projects</h2>
 
-    <div class="featured">
-      <div class="project">
-        <div class="shot">[Screenshot: project 1]</div>
-        <h3><a class="name" href="#">[Project name]</a></h3>
-        <p>[One-line description of what it does and who it's for.]</p>
-        <p class="tags">[Tool · Tool · Tool]</p>
+      <div class="featured">
+        <div class="project">
+          <div class="shot">[Screenshot: project 1]</div>
+          <h3><a class="name" href="#">[Project name]</a></h3>
+          <p>[One-line description of what it does and who it's for.]</p>
+          <p class="tags">[Tool · Tool · Tool]</p>
+        </div>
+
+        <div class="project">
+          <div class="shot">[Screenshot: project 2]</div>
+          <h3><a class="name" href="#">[Project name]</a></h3>
+          <p>[One-line description of what it does and who it's for.]</p>
+          <p class="tags">[Tool · Tool · Tool]</p>
+        </div>
+
+        <div class="project">
+          <div class="shot">[Screenshot: project 3]</div>
+          <h3><a class="name" href="#">[Project name]</a></h3>
+          <p>[One-line description of what it does and who it's for.]</p>
+          <p class="tags">[Tool · Tool · Tool]</p>
+        </div>
+
+        <div class="project">
+          <div class="shot">[Screenshot: project 4]</div>
+          <h3><a class="name" href="#">[Project name]</a></h3>
+          <p>[One-line description of what it does and who it's for.]</p>
+          <p class="tags">[Tool · Tool · Tool]</p>
+        </div>
       </div>
 
-      <div class="project">
-        <div class="shot">[Screenshot: project 2]</div>
-        <h3><a class="name" href="#">[Project name]</a></h3>
-        <p>[One-line description of what it does and who it's for.]</p>
-        <p class="tags">[Tool · Tool · Tool]</p>
-      </div>
-
-      <div class="project">
-        <div class="shot">[Screenshot: project 3]</div>
-        <h3><a class="name" href="#">[Project name]</a></h3>
-        <p>[One-line description of what it does and who it's for.]</p>
-        <p class="tags">[Tool · Tool · Tool]</p>
-      </div>
-
-      <div class="project">
-        <div class="shot">[Screenshot: project 4]</div>
-        <h3><a class="name" href="#">[Project name]</a></h3>
-        <p>[One-line description of what it does and who it's for.]</p>
-        <p class="tags">[Tool · Tool · Tool]</p>
-      </div>
+      <h3 class="sub-heading">More projects</h3>
+      <ul class="more-list">
+        <li><a href="#">[Project name]</a> <span class="tags">[Tool · Tool]</span></li>
+        <li><a href="#">[Project name]</a> <span class="tags">[Tool · Tool]</span></li>
+        <li><a href="#">[Project name]</a> <span class="tags">[Tool · Tool]</span></li>
+      </ul>
     </div>
-
-    <h3 class="sub-heading">More projects</h3>
-    <ul class="more-list">
-      <li><a href="#">[Project name]</a> <span class="tags">[Tool · Tool]</span></li>
-      <li><a href="#">[Project name]</a> <span class="tags">[Tool · Tool]</span></li>
-      <li><a href="#">[Project name]</a> <span class="tags">[Tool · Tool]</span></li>
-    </ul>
   </section>
 
   <section id="experience">
-    <h2>Experience</h2>
+    <div class="wrap">
+      <h2>Experience</h2>
 
-    <article class="job">
-      <time>[Start] — [End]</time>
-      <div>
-        <h3>[Job title]</h3>
-        <p class="company">[Organisation]</p>
-        <ul>
-          <li>[What you did and the result.]</li>
-        </ul>
-      </div>
-    </article>
+      <article class="job">
+        <time>[Start] — [End]</time>
+        <div>
+          <h3>[Job title]</h3>
+          <p class="company">[Organization]</p>
+          <ul>
+            <li>[What you did and the result.]</li>
+          </ul>
+        </div>
+      </article>
 
-    <article class="job">
-      <time>[Start] — [End]</time>
-      <div>
-        <h3>[Job title]</h3>
-        <p class="company">[Organisation]</p>
-        <ul>
-          <li>[What you did and the result.]</li>
-        </ul>
-      </div>
-    </article>
+      <article class="job">
+        <time>[Start] — [End]</time>
+        <div>
+          <h3>[Job title]</h3>
+          <p class="company">[Organization]</p>
+          <ul>
+            <li>[What you did and the result.]</li>
+          </ul>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
+    <div class="wrap">
+      <h2>Skills</h2>
 
-    <div class="skill-groups">
-      <div class="skill-group">
-        <h3>[Group name, e.g. Languages]</h3>
-        <ul class="chips">
-          <li>[Skill]</li>
-          <li>[Skill]</li>
-          <li>[Skill]</li>
-        </ul>
-      </div>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>[Group name, e.g. Languages]</h3>
+          <ul class="chips">
+            <li>[Skill]</li>
+            <li>[Skill]</li>
+            <li>[Skill]</li>
+          </ul>
+        </div>
 
-      <div class="skill-group">
-        <h3>[Group name, e.g. Frontend]</h3>
-        <ul class="chips">
-          <li>[Skill]</li>
-          <li>[Skill]</li>
-          <li>[Skill]</li>
-        </ul>
-      </div>
+        <div class="skill-group">
+          <h3>[Group name, e.g. Frontend]</h3>
+          <ul class="chips">
+            <li>[Skill]</li>
+            <li>[Skill]</li>
+            <li>[Skill]</li>
+          </ul>
+        </div>
 
-      <div class="skill-group">
-        <h3>[Group name, e.g. Backend]</h3>
-        <ul class="chips">
-          <li>[Skill]</li>
-          <li>[Skill]</li>
-          <li>[Skill]</li>
-        </ul>
-      </div>
+        <div class="skill-group">
+          <h3>[Group name, e.g. Backend]</h3>
+          <ul class="chips">
+            <li>[Skill]</li>
+            <li>[Skill]</li>
+            <li>[Skill]</li>
+          </ul>
+        </div>
 
-      <div class="skill-group">
-        <h3>[Group name, e.g. Tools]</h3>
-        <ul class="chips">
-          <li>[Skill]</li>
-          <li>[Skill]</li>
-          <li>[Skill]</li>
-        </ul>
+        <div class="skill-group">
+          <h3>[Group name, e.g. Tools]</h3>
+          <ul class="chips">
+            <li>[Skill]</li>
+            <li>[Skill]</li>
+            <li>[Skill]</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <ul class="contact-list">
-      <li><a href="mailto:oomuh570@mtroyal.ca">oomuh570@mtroyal.ca</a></li>
-      <li><a href="https://github.com/oomuh570" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/ochi-omuha/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="Omuha_Ochihai_2026_CompSci_Resume.pdf">Resume</a></li>
-    </ul>
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>[One line about what you're open to, e.g. internships, security work, or collaborations.]</p>
+      <ul class="links">
+        <li><a href="mailto:oomuh570@mtroyal.ca">oomuh570@mtroyal.ca</a></li>
+        <li><a href="https://github.com/oomuh570" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ochi-omuha/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="Omuha_Ochihai_2026_CompSci_Resume.pdf">Resume</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="play">
+    <div class="wrap">
+      <h2>Play</h2>
+      <p class="play-row">
+        <span>Repeat the pattern. Press start to begin.</span>
+      </p>
+      <div class="pad" role="group" aria-label="Pattern pads">
+        <button type="button" aria-label="Brick pad"></button>
+        <button type="button" aria-label="Gold pad"></button>
+        <button type="button" aria-label="Ink pad"></button>
+        <button type="button" aria-label="Paper pad"></button>
+      </div>
+      <div class="play-row">
+        <button type="button" id="start">Start</button>
+        <span id="msg" aria-live="polite"></span>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <span>© 2026 Ochihai Omuha</span>
-    <a href="mailto:oomuh570@mtroyal.ca">Email</a>
-    <a href="Omuha_Ochihai_2026_CompSci_Resume.pdf">Resume</a>
+    <div class="wrap">
+      <span>© 2026 Ochihai Omuha</span>
+    </div>
   </footer>
 
   <script>
+    /* Clock in the status bar */
     function updateClock() {
       const now = new Date();
       document.getElementById("sb-date").textContent =
@@ -201,64 +203,71 @@
     }
     updateClock();
     setInterval(updateClock, 30000);
-
-    const tiles = document.querySelectorAll("[data-theme-pick]");
-    const spot = document.getElementById("menu-spot");
-    const label = document.getElementById("menu-label");
-
-    function sync() {
-      const active = document.querySelector('[data-theme-pick][aria-pressed="true"]');
-      if (!active) return;
-      spot.style.left = (active.offsetLeft - 6) + "px";
-      spot.style.top = (active.offsetTop - 6) + "px";
-      label.textContent = active.getAttribute("aria-label");
-    }
-
-    tiles.forEach((tile) => {
-      tile.addEventListener("click", () => {
-        const pick = tile.dataset.themePick;
-        if (pick === "original") {
-          document.documentElement.removeAttribute("data-palette");
-        } else {
-          document.documentElement.setAttribute("data-palette", pick);
-        }
-        tiles.forEach((t) => t.setAttribute("aria-pressed", String(t === tile)));
-        sync();
-      });
-    });
-
-    sync();
-    window.addEventListener("resize", sync);
-
-    // Arrow keys move focus through the rail and pick the focused theme
-    document.querySelector(".menu-row").addEventListener("keydown", (e) => {
-      const picks = [...document.querySelectorAll("[data-theme-pick]")];
-      const idx = picks.indexOf(document.activeElement);
-      if (idx < 0) return;
-      const forward = e.key === "ArrowRight" || e.key === "ArrowDown";
-      const back = e.key === "ArrowLeft" || e.key === "ArrowUp";
-      if (!forward && !back) return;
-      const next = forward ? Math.min(idx + 1, picks.length - 1) : Math.max(idx - 1, 0);
-      picks[next].focus();
-      picks[next].click();
-      e.preventDefault();
-    });
-
-    // Light/dark toggle. If no mode has been chosen yet, start from the system setting.
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      const root = document.documentElement;
-      const current = root.getAttribute("data-theme");
-      const isDark = current ? current === "dark"
-        : window.matchMedia("(prefers-color-scheme: dark)").matches;
-      root.setAttribute("data-theme", isDark ? "light" : "dark");
-    });
-
-    // God of War: the giant flashes every 3 seconds (T019)
-    const giant = document.querySelector(".giant");
-    setInterval(() => {
-      giant.classList.add("hit");
-      setTimeout(() => giant.classList.remove("hit"), 200);
-    }, 3000);
   </script>
+
+  <script>
+    /* Pattern game */
+    (function () {
+      var tiles = [].slice.call(document.querySelectorAll(".pad button"));
+      var startBtn = document.getElementById("start");
+      var msg = document.getElementById("msg");
+      var seq = [], pos = 0, busy = true, timers = [];
+
+      function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+
+      function flash(i) {
+        var t = tiles[i];
+        t.classList.add("lit");
+        later(function () { t.classList.remove("lit"); }, 350);
+      }
+
+      function playSeq() {
+        busy = true;
+        msg.textContent = "Watch...";
+        seq.forEach(function (v, k) {
+          later(function () { flash(v); }, 600 * (k + 1));
+        });
+        later(function () {
+          busy = false;
+          pos = 0;
+          msg.textContent = "Your turn";
+        }, 600 * (seq.length + 1));
+      }
+
+      function next() {
+        seq.push(Math.floor(Math.random() * 4));
+        playSeq();
+      }
+
+      function start() {
+        timers.forEach(clearTimeout);
+        timers = [];
+        seq = [];
+        startBtn.textContent = "Restart";
+        next();
+      }
+
+      tiles.forEach(function (t, i) {
+        t.addEventListener("click", function () {
+          if (busy || !seq.length) return;
+          flash(i);
+          if (seq[pos] !== i) {
+            busy = true;
+            msg.textContent = "Got " + (seq.length - 1) + " in a row. Restart to try again.";
+            return;
+          }
+          pos++;
+          if (pos === seq.length) {
+            busy = true;
+            msg.textContent = "Nice. Next round.";
+            later(next, 800);
+          }
+        });
+      });
+
+      startBtn.addEventListener("click", start);
+    })();
+  </script>
+
 </body>
 </html>
