@@ -414,6 +414,18 @@ h1.neon em {
   box-shadow: 0 8px 18px -10px var(--accent);
 }
 
+/* Logos inside skill chips */
+.chips li {
+  gap: 6px;
+}
+
+.chips li svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  flex: none;
+}
+
 /* Contact */
 .contact p {
   margin: 0 0 16px;
@@ -467,6 +479,23 @@ h1.neon em {
 .play-row button:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+/* Light / dark switch in the top bar */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
+  border-color: var(--muted);
 }
 
 /* Smooth scrolling and a short highlight when a section link is clicked */
