@@ -89,11 +89,18 @@ header {
   padding: 64px 0 28px;
 }
 
-/* Case file stamp, top-left of the header */
-.case-label {
+/* Case file stamp and focus line, top-left of the header */
+.stamp-row {
   position: absolute;
   top: 28px;
   left: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.case-label {
   margin: 0;
   font-family: var(--sans);
   font-size: 0.75rem;
@@ -118,6 +125,21 @@ header {
 
 .status-bar .sb-user {
   color: var(--ink);
+}
+
+/* Focus areas line above the name */
+.focus-line {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* Focus line placed under the name */
+.focus-under-name {
+  margin: 14px 0 0;
 }
 
 /* Name: big, uppercase, with the surname in italic accent */
@@ -217,6 +239,11 @@ h1.neon em {
   gap: 36px 32px;
 }
 
+.featured .project:nth-child(3) {
+  margin-top: 36px;
+}
+
+
 .project {
   position: relative;
   background: var(--surface);
@@ -224,10 +251,6 @@ h1.neon em {
   box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.22);
   padding: 20px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.featured .project:nth-child(3) {
-  margin-top: 36px;
 }
 
 .project:hover {
@@ -283,6 +306,18 @@ h1.neon em {
   margin: 0;
 }
 
+/* Links under a project card (GitHub, live demo) */
+.repo-link {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 18px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
 /* Screenshot placeholder */
 .shot {
   height: 170px;
@@ -297,6 +332,13 @@ h1.neon em {
     repeating-linear-gradient(0deg, rgba(127, 127, 127, 0.12) 0 1px, transparent 1px 4px),
     color-mix(in srgb, var(--surface) 84%, var(--ink) 10%);
   transition: filter 0.25s ease;
+}
+
+img.shot {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
 }
 
 .project:hover .shot {
@@ -545,6 +587,100 @@ section:target h2 {
   border-bottom-color: var(--accent);
 }
 
+/* More projects: card grid */
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 24px;
+}
+
+.more-card {
+  padding: 16px;
+}
+
+.more-card .shot {
+  height: 150px;
+  margin-bottom: 14px;
+}
+
+.more-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.more-card h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.more-card .year {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.more-card .tags {
+  margin: 6px 0 10px;
+}
+
+.more-card p:not(.tags) {
+  font-size: 0.95rem;
+}
+
+.more-card .repo-link {
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .more-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .more-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Year shown beside each featured project name */
+.featured-head {
+  margin: 16px 0 8px;
+}
+
+.featured-head h3 {
+  margin: 0;
+}
+
+/* Equal-size project cards in both grids */
+.featured,
+.more-grid {
+  grid-auto-rows: 1fr;
+}
+
+.featured .project:nth-child(3) {
+  margin-top: 0;
+}
+
+.featured .project,
+.more-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.featured .shot,
+.more-card .shot {
+  height: 170px;
+  flex: none;
+}
+
+.project .repo-link:first-of-type {
+  margin-top: auto;
+}
+
 /* Footer */
 footer {
   border-top: 1px solid var(--line);
@@ -576,7 +712,7 @@ footer .wrap {
     padding: 48px 0 32px;
   }
 
-  .case-label {
+  .stamp-row {
     left: 24px;
     top: 20px;
   }
